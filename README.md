@@ -57,4 +57,4 @@ Feel free to reach out GitHub or email if you have any questions
 * SBanuelos1234@gmail.com
 
 Made with ❤️ by Salvador Banuelos
-### © 2022 Employee Tracker MySQL, Inc.
+### © 2022 Elite Budget Tracker, Inc.
