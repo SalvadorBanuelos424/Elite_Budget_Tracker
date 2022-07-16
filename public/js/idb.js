@@ -11,7 +11,7 @@ request.onupgradeneeded = function (event) {
 request.onsuccess = function (event) {
     db = event.target.result;
     if (navigator.onLine) {
-        uploadTransaction();
+        uploadTransactions();
     }
 };
 
@@ -19,7 +19,6 @@ request.onerror = function (event) {
     console.log(event.target.errorCode);
 };
 
-// i
 function saveRecord(record) {
     const transaction = db.transaction(['new_transaction'], 'readwrite');
     const budgetObjectStore = transaction.objectStore('new_transaction');
@@ -27,7 +26,7 @@ function saveRecord(record) {
     budgetObjectStore.add(record);
 }
 
-function uploadTransaction() {
+function uploadTransactions() {
     // open a transaction on your pending db
     const transaction = db.transaction(['new_transaction'], 'readwrite');
     // access your pending object store
@@ -38,7 +37,7 @@ function uploadTransaction() {
     getAll.onsuccess = function () {
         // if there was data in indexedDb's store, let's send it to the api server
         if (getAll.result.length > 0) {
-            fetch('/api/transaction/bulk', {
+            fetch('/api/transaction', {
                 method: 'POST',
                 body: JSON.stringify(getAll.result),
                 headers: {
@@ -67,4 +66,4 @@ function uploadTransaction() {
 }
 
 // listen for app coming back online
-window.addEventListener('online', uploadTransaction);
+window.addEventListener('online', uploadTransactions);
