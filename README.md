@@ -1,12 +1,13 @@
-# Employee Tracker MySQL, Inc,
-https://github.com/SalvadorBanuelos424/ORM_E-Commerce
+# Elite Budget Tracker, Inc,
+https://budgetxbudget.herokuapp.com/
+https://github.com/SalvadorBanuelos424/Elite_Budget_Tracker
 
 ![Badge](https://img.shields.io/badge/License-${license}-blue)
 
 ## Description
-E-commerce is extremely important to businesses and business customers, it connects marketplaces to people.  This app connects the backend (server-side) to the potential client-side (frontend).  Utilize Rest API's and Sequelize-MySQL to manipulate this e-commerce database. 
+This budget tracker works both online and offline.  Keep track off all your expenses and deposits anytime anyplace.  Download the app from the website and it even works in airplane mode, & whenever you go back online the app will update the database automatically.
  
- ![image of application](./assets/img/insomnia.jpg)
+ ![image of application](/public/assets/image/budget.jpg)
 
  ## Table of Contents
   - [Description](#description)
@@ -21,23 +22,21 @@ E-commerce is extremely important to businesses and business customers, it conne
   - [Email](#email)
   
 ## Installation
-Clone git repository, type in terminal "npm i" to install node-modules
+Clone git repository, type in terminal "npm i" to install node-modules.
 
 ## Built With 
 * JS
 * Node.js
-* JSON
-* MySQL2
-* Inquirer
+* HTML
+* CSS
+* Mongoose
 * Express
-* Sequelize
+* Compression
+* Morgan
 
 ## Usage
-After installing node-modules, type in terminal "mysql -u root -p" and "<password>" to enter MySql.
-Then type in mysql terminal "source db/schema.sql;" and then "/q" to connect schema.sql.
-Then type in terminal "npm run seed" to seed database, finally type in terminal "npm start" in order to localhost to Insomnia.
-
-Insomnia will allow you to Test and Validate RESTful API applications.
+After installing node-modules, type in terminal "npm start" and run localhost:27017/.
+Enter the credit or debit alongside with the amount, this app keeps track of the transactions
 
 ## License
 This program is licensed by MIT.
